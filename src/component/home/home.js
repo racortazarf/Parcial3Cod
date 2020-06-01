@@ -6,10 +6,19 @@ function home(props) {
   console.log(props);
   return (
     <div>
-      <h1 id="titulo">{'P0'}</h1>
-  <h2>{'P1'}</h2>
+      
+  <h2>{'Pagina de home'}</h2>
   <li>
   <Link to="/regis">{'Registrese !!'}</Link>
+  </li>
+  <li>
+  <Link to="/visual">{'Usuarios registrados !!'}</Link>
+  </li>
+  <li>
+  <Link to="/mod">{'Modificar-actualizar usuarios !!'}</Link>
+  </li>
+  <li>
+  <Link to="/">{'Acerca de nosotros !!'}</Link>
   </li>
 
     </div>
