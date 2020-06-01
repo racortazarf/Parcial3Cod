@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import './regis.css';
 
 import React, { useState } from 'react';
@@ -25,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
-function regis() {
+function Regis() {
   const [textName, setTextName] = useState('');
   const [textLastName, setTextLastName] = useState('');
   const [textAge, setTextAge] = useState('');
@@ -36,12 +35,25 @@ function regis() {
   const [textCheck2, setTextCheck2] = useState('');
   
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const clasess = useStyles();
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    console.log(textName, textLastName,textAge,textEmail,textPass,textPass2,textCheck1,textCheck2);
+
+if (!textCheck1){
+  window.alert("Debe seleccionar una opcion")
+}
+else{
+  if(textPass !== textPass2){
+    window.alert("Los campos de contraseña deben ser iguales")
+  }
+  else{
+    console.log(textName, textLastName,textAge,textEmail);
+  }
+}
+
+
+    
     await axios.post('http://localhost:8080/user', {
       name: textName,
       lastName: textLastName,
@@ -152,7 +164,6 @@ function regis() {
           className={clasess.root}
           id="Contraseña"
           label="Contraseña"
-          minlength="8"
           secureTextEntry={true}
           variant="outlined"
           required
@@ -163,8 +174,7 @@ function regis() {
           type="password"
           className={clasess.root}
           id="Contraseña"
-          label="Repetir Contraseña"
-          minlength="8"
+          label="Confirmar Contraseña"
           secureTextEntry={true}
           variant="outlined"
           required
@@ -225,4 +235,4 @@ function regis() {
   );
 }
 
-export default regis;
+export default Regis;

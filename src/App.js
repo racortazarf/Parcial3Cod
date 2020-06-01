@@ -4,8 +4,8 @@ import React from 'react';
 
 import Approute from './nav/Approute';
 
-function App() {
-  return (
+function App(props) {
+  return (  
     <div>
       <Approute />
     </div>
