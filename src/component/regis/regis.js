@@ -2,8 +2,6 @@ import './regis.css';
 
 import React, { useState } from 'react';
 
-
-
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
@@ -12,16 +10,10 @@ import Icon from '@material-ui/core/Icon';
 import Checkbox from '@material-ui/core/Checkbox';
 import axios from 'axios';
 
-
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: '10px',
-    
-
   },
-  
 }));
 
 function Regis() {
@@ -33,27 +25,22 @@ function Regis() {
   const [textPass2, setTextPass2] = useState('');
   const [textCheck1, setTextCheck1] = useState('');
   const [textCheck2, setTextCheck2] = useState('');
-  
 
   const clasess = useStyles();
 
   const onSubmit = async (event) => {
     event.preventDefault();
 
-if (!textCheck1){
-  window.alert("Debe seleccionar una opcion")
-}
-else{
-  if(textPass !== textPass2){
-    window.alert("Los campos de contraseña deben ser iguales")
-  }
-  else{
-    console.log(textName, textLastName,textAge,textEmail);
-  }
-}
+    if (!textCheck1) {
+      window.alert('Debe seleccionar una opcion');
+    } else {
+      if (textPass !== textPass2) {
+        window.alert('Los campos de contraseña deben ser iguales');
+      } else {
+        console.log(textName, textLastName, textAge, textEmail);
+      }
+    }
 
-
-    
     await axios.post('http://localhost:8080/user', {
       name: textName,
       lastName: textLastName,
@@ -62,10 +49,7 @@ else{
       pass: textPass,
       check1: textCheck1,
       check2: textCheck2,
-
-
-
-    })
+    });
 
     await axios.post('http://localhost:8080/user', {
       name: textName,
@@ -74,8 +58,7 @@ else{
       Email: textEmail,
       Pass: textPass,
       Ocupation: textCheck1,
-      Gener: textCheck2, 
-
+      Gener: textCheck2,
     });
   };
 
@@ -104,22 +87,17 @@ else{
   const onChangeCheck2 = (event) => {
     setTextCheck2(event.target.value);
   };
- 
- 
-
 
   return (
-    
     <div className="mainDiv">
       <Typography className="encabezado">
         Bienvenido
-
-            <h1 className="textoencabezado"> Ingreso de datos para registro</h1>
-          </Typography>
+        <h1 className="textoencabezado"> Ingreso de datos para registro</h1>
+      </Typography>
       <form onSubmit={onSubmit}>
-      <Typography > 
-            <h2  className="Subsec">Datos Personales</h2>
-          </Typography>
+        <Typography>
+          <h2 className="Subsec">Datos Personales</h2>
+        </Typography>
         <TextField
           type="text"
           className={clasess.root}
@@ -169,7 +147,7 @@ else{
           required
           onChange={onChangePass}
         />
-         <br />
+        <br />
         <TextField
           type="password"
           className={clasess.root}
@@ -180,56 +158,37 @@ else{
           required
           onChange={onChangePass2}
         />
-    
-        <br /> 
-        <Typography className="Subsec"> 
-            <h2  className="Subsec">Ocupación</h2>
-          </Typography>
-       
 
-        <Checkbox
-         name="check1" onChange={onChangeCheck1} value="Estudiante"
-        inputProps={{ 'aria-label': 'primary checkbox' }}
-      />
-      <label>Estudiante</label>
-      
-      <Checkbox
-         name="check1" onChange={onChangeCheck1} value="Administrativo"
-        inputProps={{ 'aria-label': 'primary checkbox' }}
-      />
-      <label>Administrativo</label>
-      
-      <Checkbox
-         name="check1" onChange={onChangeCheck1} value="Docente"
-        inputProps={{ 'aria-label': 'primary checkbox' }}
-      />
-      <label>Docente</label>
-        
-
-        <Typography > 
-            <h2  className="Subsec">Género</h2>
-          </Typography>
-
-        
-        <Checkbox
-         name="check2" onChange={onChangeCheck2} value="Masculino"
-        inputProps={{ 'aria-label': 'primary checkbox' }}
-      />
-      <label>Masculino</label>
-        
-
-      <Checkbox
-         name="check2" onChange={onChangeCheck2} value="Femenino"
-        inputProps={{ 'aria-label': 'primary checkbox' }}
-      />
-      <label>Femenino</label>
-        
         <br />
-        <Button type="submit" variant="contained" color="secondary"  endIcon={<Icon>send</Icon>}>
+
+        <Checkbox
+          name="check1"
+          onChange={onChangeCheck1}
+          value="Acepto terminos y condiciones"
+          inputProps={{ 'aria-label': 'primary checkbox' }}
+        />
+        <label>Al Registrarse, Aceptas los Terminos y Condiciones</label>
+
+        <br />
+        <Button
+          type="submit"
+          variant="contained"
+          color="secondary"
+          endIcon={<Icon></Icon>}
+        >
           Registrar
         </Button>
-
-       
+        <label> </label>
+        <label>
+          <Button
+            type="submit"
+            variant="contained"
+            color="secondary"
+            endIcon={<Icon></Icon>}
+          >
+            Cancelar
+          </Button>
+        </label>
       </form>
     </div>
   );
