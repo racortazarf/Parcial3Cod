@@ -50,16 +50,6 @@ function Regis() {
       check1: textCheck1,
       
     });
-
-    await axios.post('http://localhost:8080/user', {
-      name: textName,
-      lastName: textLastName,
-      Age: textAge,
-      Email: textEmail,
-      Pass: textPass,
-      Ocupation: textCheck1,
-      
-    });
   };
 
   const onChangeName = (event) => {
