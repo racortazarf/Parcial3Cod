@@ -24,7 +24,7 @@ function Regis() {
   const [textPass, setTextPass] = useState('');
   const [textPass2, setTextPass2] = useState('');
   const [textCheck1, setTextCheck1] = useState('');
-  const [textCheck2, setTextCheck2] = useState('');
+  
 
   const clasess = useStyles();
 
@@ -48,7 +48,7 @@ function Regis() {
       email: textEmail,
       pass: textPass,
       check1: textCheck1,
-      check2: textCheck2,
+      
     });
 
     await axios.post('http://localhost:8080/user', {
@@ -58,7 +58,7 @@ function Regis() {
       Email: textEmail,
       Pass: textPass,
       Ocupation: textCheck1,
-      Gener: textCheck2,
+      
     });
   };
 
@@ -84,10 +84,7 @@ function Regis() {
   const onChangeCheck1 = (event) => {
     setTextCheck1(event.target.value);
   };
-  const onChangeCheck2 = (event) => {
-    setTextCheck2(event.target.value);
-  };
-
+  
   return (
     <div className="mainDiv">
       <Typography className="encabezado">
@@ -173,7 +170,7 @@ function Regis() {
         <Button
           type="submit"
           variant="contained"
-          color="secondary"
+          color="primary"
           endIcon={<Icon></Icon>}
         >
           Registrar
@@ -181,7 +178,7 @@ function Regis() {
         <label> </label>
         <label>
           <Button
-            type="submit"
+            type="reset"
             variant="contained"
             color="secondary"
             endIcon={<Icon></Icon>}
