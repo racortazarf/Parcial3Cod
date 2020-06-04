@@ -39,6 +39,9 @@ function Regis() {
       } else {
         console.log(textName, textLastName, textAge, textEmail);
       }
+          if (textAge < 0){
+        window.alert('No puede tener edad negativa');
+      }
     }
 
     await axios.post('http://localhost:8080/user', {
@@ -106,10 +109,10 @@ function Regis() {
         />
         <br />
         <TextField
-          type="number"
+          type="date"
           className={clasess.root}
           id="Edad"
-          label="Edad"
+          label="Fecha de Nacimiento"
           variant="outlined"
           onChange={onChangeAge}
         />
