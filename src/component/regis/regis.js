@@ -23,7 +23,7 @@ function Regis() {
   const [textEmail, setTextEmail] = useState('');
   const [textPass, setTextPass] = useState('');
   const [textPass2, setTextPass2] = useState('');
-  const [textCheck1, setTextCheck1] = useState('');
+  const [textCheck1, setTextCheck1] = useState(false);
   
 
   const clasess = useStyles();
@@ -39,21 +39,33 @@ function Regis() {
       } else {
         console.log(textName, textLastName, textAge, textEmail);
       }
-          if (textAge < 0){
+         /* if (textAge < 0){
         window.alert('No puede tener edad negativa');
-      }
+      }*/
     }
+    
 
-    await axios.post('http://localhost:8080/user', {
+     axios.post('http://localhost:8080/user', {
       name: textName,
       lastName: textLastName,
       age: textAge,
       email: textEmail,
       pass: textPass,
-      check1: textCheck1,
+    })
+    .then(function (response){
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
       
     });
+    
   };
+
+ 
+
+
+  
 
   const onChangeName = (event) => {
     setTextName(event.target.value);
@@ -91,7 +103,7 @@ function Regis() {
         <TextField
           type="text"
           className={clasess.root}
-          id="Nombre"
+          id="name"
           label="Nombre"
           variant="outlined"
           required
@@ -101,7 +113,7 @@ function Regis() {
         <TextField
           type="text"
           className={clasess.root}
-          id="Apellido"
+          id="lastName"
           label="Apellido"
           variant="outlined"
           required
@@ -109,10 +121,10 @@ function Regis() {
         />
         <br />
         <TextField
-          type="date"
+          type="number"
           className={clasess.root}
-          id="Edad"
-          label="Fecha de Nacimiento"
+          id="age"
+          label="Edad"
           variant="outlined"
           onChange={onChangeAge}
         />
@@ -120,7 +132,7 @@ function Regis() {
         <TextField
           type="email"
           className={clasess.root}
-          id="Email"
+          id="email"
           label="Email"
           variant="outlined"
           required
@@ -130,7 +142,7 @@ function Regis() {
         <TextField
           type="password"
           className={clasess.root}
-          id="Contraseña"
+          id="pass"
           label="Contraseña"
           secureTextEntry={true}
           variant="outlined"
@@ -141,7 +153,7 @@ function Regis() {
         <TextField
           type="password"
           className={clasess.root}
-          id="Contraseña"
+          id="pass"
           label="Confirmar Contraseña"
           secureTextEntry={true}
           variant="outlined"
