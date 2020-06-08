@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Regis() {
+function Regis(props) {
   const [textName, setTextName] = useState('');
   const [textLastName, setTextLastName] = useState('');
   const [textAge, setTextAge] = useState('');
@@ -45,7 +45,7 @@ function Regis() {
     }
     
 
-     axios.post('http://localhost:8080/user', {
+     axios.post('http://parcial3app-env.eba-pbupt3qx.us-east-2.elasticbeanstalk.com/user', {
       name: textName,
       lastName: textLastName,
       age: textAge,
@@ -59,7 +59,13 @@ function Regis() {
       console.log(error);
       
     });
-    
+    const {history, location } = props;
+    const { from } = location.state || {
+      from: {
+        pathname: '/home',
+      },
+    };
+    history.push(from);
   };
 
  

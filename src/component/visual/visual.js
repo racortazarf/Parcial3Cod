@@ -15,7 +15,8 @@ function visual() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=> {
         if (!statusFlag){
-            axios.get('http://localhost:8080/user').then((response)=> {
+            axios.get('http://parcial3app-env.eba-pbupt3qx.us-east-2.elasticbeanstalk.com/user'
+            ).then((response)=> {
             console.log(response);
             setUserData(response);
             setStatusFlag(true);
@@ -31,7 +32,7 @@ function visual() {
           return(
             <div>
               {userData.data.map((val) =>  (
-                <p key = {val.userid}>{JSON.stringify(val)}</p>
+                <p key = {val.userid}>{val.name}</p>
               ))}
             </div>
            );
