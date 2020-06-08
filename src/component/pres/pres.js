@@ -26,6 +26,24 @@ function pres(props) {
                 <li>
                     Cristian LLanos
                 </li>
+                <li>
+                <input
+                     type="button"
+                     onclick=" location.href='https://github.com/racortazarf/Parcial3Cod' "
+                     value="Repositorio front"
+                     name="boton"
+                     id="botonrepo"
+                 />
+                </li>
+                <li>
+                <input
+                     type="button"
+                     onclick="location.href='https://github.com/camilo95951/Parcial3_Back'; "
+                     value="Repositorio back"
+                     name="boton"
+                     id="botonrepo"
+                 />
+                </li>
             </p>
             <li>
              <Link to="/home">{'Pagina de inicio'}</Link>
