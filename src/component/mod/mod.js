@@ -29,7 +29,7 @@ function mod() {
         // eslint-disable-next-line no-lone-blocks
         
         return (
-          <div>
+          <div><center>
             <h3>{"Actualización de datos"}</h3>     
             <br />  
             <table>
@@ -56,7 +56,7 @@ function mod() {
                     ))}
               </tbody>
             </table>
-         </div>
+          </center></div>
       ); 
            
     };
@@ -79,7 +79,7 @@ function mod() {
 
     return (
         <div>
-            <h1>{'Pagina de modificacion'}</h1>
+            <h1><center> {'Pagina de modificacion'} </center></h1>
             {userData === null ? null : mdData()}
         </div>
     );

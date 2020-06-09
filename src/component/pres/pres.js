@@ -5,28 +5,34 @@ import { Link } from 'react-router-dom';
 function pres(props) {
     console.log(props);
     return (
-        <div>
+        <div><center>
             <h1>{'Pagina de presentacion'}</h1>
             <p>
-                <li>
+                <div>
                     Edwin Carreño
-                </li>
-                <li>
+                </div>
+                <br />
+                <div>
                     Camilo Salgado
-                </li>
-                <li>
+                </div>
+                <br />
+                <div>
                     Jose Peñaloza
-                </li>
-                <li>
+                </div>
+                <br />
+                <div>
                     William Gonzalez
-                </li>
-                <li>
+                </div>
+                <br />
+                <div>
                     Richard Cortazar
-                </li>
-                <li>
+                </div>
+                <br />
+                <div>
                     Cristian LLanos
-                </li>
-                <li>
+                </div>
+                <br />
+                <div>
                 <input
                      type="button"
                      onclick=" location.href='https://github.com/racortazarf/Parcial3Cod' "
@@ -34,8 +40,9 @@ function pres(props) {
                      name="boton"
                      id="botonrepo"
                  />
-                </li>
-                <li>
+                </div>
+                <br />
+                <div>
                 <input
                      type="button"
                      onclick="location.href='https://github.com/camilo95951/Parcial3_Back'; "
@@ -43,12 +50,13 @@ function pres(props) {
                      name="boton"
                      id="botonrepo"
                  />
-                </li>
+                </div>
+                <br />
             </p>
-            <li>
+            <div>
              <Link to="/home">{'Pagina de inicio'}</Link>
-            </li>
-        </div>
+            </div>
+        </center></div>
     );
 }
 
