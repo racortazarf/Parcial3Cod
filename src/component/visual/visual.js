@@ -15,7 +15,7 @@ function visual() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=> {
         if (!statusFlag){
-            axios.get('http://parcial3app-env.eba-pbupt3qx.us-east-2.elasticbeanstalk.com/user'
+            axios.get('http://localhost:8080/user'
             ).then((response)=> {
             console.log(response);
             setUserData(response);
@@ -29,16 +29,42 @@ function visual() {
     const vsData = (params) => {
         // eslint-disable-next-line no-lone-blocks
         
-          return(
-            <div>
-              {userData.data.map((val) =>  (
-                <p key = {val.userid}>{val.name}</p>
-              ))}
-            </div>
-           );
+        return (
+          <div>
+            <h1>{"Usuarios Registrados"}</h1>
+            <br />
+       
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Edad</th>
+                  <th>Correo</th>
+                </tr>
+              </thead>
+              <tbody>
+                {userData === null
+                  ? null
+                  : userData.data.map((val) => (
+                      <tr key={val.userid}>
+                        <td>{val.userid}</td>
+                        <td>{val.name}</td>
+                        <td>{val.lastname}</td>
+                        <td>{val.age}</td>
+                        <td>{val.email}</td>
+                      </tr>
+                    ))}
+              </tbody>
+            </table>
+         </div>
+      ); 
            
     };
         
+
+
     //const arr =['richard', 'alexander'];
     return (
         <div>
