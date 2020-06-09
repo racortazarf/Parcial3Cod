@@ -31,9 +31,8 @@ function visual() {
         
         return (
           <div>
-            <h1>{"Usuarios Registrados"}</h1>
-            <br />
-       
+            <h3>{"Lista de personal"}</h3>     
+            <br />  
             <table>
               <thead>
                 <tr>
