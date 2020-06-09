@@ -1,45 +1,54 @@
 import React from 'react';
-
+import './pres.css';
 import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload'
 
 function pres(props) {
     console.log(props);
     return (
         <div><center>
-            <h1>{'Pagina de presentacion'}</h1>
+            <h1 className="encabezado">{'Pagina de presentacion'}
+            <br />
+            <Link to="/home">
+                <Button
+                    type="reset"
+                    variant="contained"
+                    color="primary"
+                    startIcon={<CloudUploadIcon />}>
+                    Pagina de Inicio
+                </Button>
+            </Link> 
+            </h1>
             <p>
-                <div>
+                <div id="nombres">
                     Edwin Carreño
                 </div>
                 <br />
-                <div>
+                <div id="nombres">
                     Camilo Salgado
                 </div>
                 <br />
-                <div>
+                <div id="nombres">
                     Jose Peñaloza
                 </div>
                 <br />
-                <div>
+                <div id="nombres">
                     William Gonzalez
                 </div>
                 <br />
-                <div>
+                <div id="nombres">
                     Richard Cortazar
                 </div>
                 <br />
-                <div>
+                <div id="nombres">
                     Cristian LLanos
                 </div>
                 <br />
                 <div>
-                <input
-                     type="button"
-                     onclick=" location.href='https://github.com/racortazarf/Parcial3Cod' "
-                     value="Repositorio front"
-                     name="boton"
-                     id="botonrepo"
-                 />
+                <Link href ="https://github.com/camilo95951/Parcial3_Back">
+                   <Button variant="contained">Default</Button>
+                </Link>
                 </div>
                 <br />
                 <div>
@@ -53,9 +62,6 @@ function pres(props) {
                 </div>
                 <br />
             </p>
-            <div>
-             <Link to="/home">{'Pagina de inicio'}</Link>
-            </div>
         </center></div>
     );
 }

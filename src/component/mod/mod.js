@@ -79,7 +79,7 @@ function mod() {
 
     return (
         <div>
-            <h1><center> {'Pagina de modificacion'} </center></h1>
+            <h1 className="encabezado"> {'Pagina de modificacion'} </h1>
             {userData === null ? null : mdData()}
         </div>
     );
