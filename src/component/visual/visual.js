@@ -32,7 +32,8 @@ function visual() {
         
         return (
           <div><center> 
-            <h3 id="nombres"><center> {"Lista de personal"} </center></h3>     
+            <h3 id="nombres"> <center> <span class="badge badge-secondary"> {"Lista de personal"} </span> </center></h3> 
+             
             <br />  
             <table>
               <thead>
