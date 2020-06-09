@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { TextField } from '@material-ui/core';
 
+
 function visual() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [textValue, setTextValue] = useState('');
@@ -31,7 +32,7 @@ function visual() {
         
         return (
           <div><center> 
-            <h3><center> {"Lista de personal"} </center></h3>     
+            <h3 id="nombres"><center> {"Lista de personal"} </center></h3>     
             <br />  
             <table>
               <thead>
@@ -67,7 +68,7 @@ function visual() {
     //const arr =['richard', 'alexander'];
     return (
         <div>
-            <h1><center> {'Usuarios registrados'} </center></h1>
+            <h1 className="encabezado"> {'Usuarios registrados'} </h1>
             {userData === null ? null : vsData()}
         </div>
     );

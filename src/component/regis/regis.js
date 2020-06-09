@@ -1,7 +1,5 @@
 import './regis.css';
-
 import React, { useState } from 'react';
-
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
@@ -9,6 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import Icon from '@material-ui/core/Icon';
 import Checkbox from '@material-ui/core/Checkbox';
 import axios from 'axios';
+import SaveIcon from '@material-ui/icons/Save';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -98,7 +98,7 @@ function Regis(props) {
   
   return (
     <div className="mainDiv"><center> 
-      <Typography className="encabezado">
+      <Typography className="encabezado" id="nombres">
         Bienvenido
         <h1 className="textoencabezado"> Ingreso de datos para registro</h1>
         <input
@@ -189,7 +189,7 @@ function Regis(props) {
           type="submit"
           variant="contained"
           color="primary"
-          endIcon={<Icon></Icon>}
+          startIcon={<SaveIcon />}
         >
           Registrar
         </Button>
@@ -199,7 +199,7 @@ function Regis(props) {
             type="reset"
             variant="contained"
             color="secondary"
-            endIcon={<Icon></Icon>}
+            startIcon={<DeleteIcon />}
           >
             Cancelar
           </Button>
