@@ -30,8 +30,8 @@ function visual() {
         // eslint-disable-next-line no-lone-blocks
         
         return (
-          <div>
-            <h3>{"Lista de personal"}</h3>     
+          <div><center> 
+            <h3><center> {"Lista de personal"} </center></h3>     
             <br />  
             <table>
               <thead>
@@ -57,7 +57,7 @@ function visual() {
                     ))}
               </tbody>
             </table>
-         </div>
+          </center></div>
       ); 
            
     };
@@ -67,7 +67,7 @@ function visual() {
     //const arr =['richard', 'alexander'];
     return (
         <div>
-            <h1>{'Usuarios registrados'}</h1>
+            <h1><center> {'Usuarios registrados'} </center></h1>
             {userData === null ? null : vsData()}
         </div>
     );

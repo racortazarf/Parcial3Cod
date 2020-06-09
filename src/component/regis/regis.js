@@ -97,10 +97,17 @@ function Regis(props) {
   };
   
   return (
-    <div className="mainDiv">
+    <div className="mainDiv"><center> 
       <Typography className="encabezado">
         Bienvenido
         <h1 className="textoencabezado"> Ingreso de datos para registro</h1>
+        <input
+          type="image"
+          src="https://radcolombia.org/web/sites/default/files/archivos/instituciones/fundacion-universitaria-libertadores/logo-full.png"
+          alt=""
+          width="300"
+          height="150"
+        />
       </Typography>
       <form onSubmit={onSubmit}>
         <Typography>
@@ -198,7 +205,7 @@ function Regis(props) {
           </Button>
         </label>
       </form>
-    </div>
+    </center></div>
   );
 }
 
