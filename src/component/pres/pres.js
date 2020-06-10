@@ -22,11 +22,11 @@ function pres(props) {
             </h1>
             <p>
                 <div id="nombres">
-                    Edwin Carreño
+                    Camilo Salgado
                 </div>
                 <br />
                 <div id="nombres">
-                    Camilo Salgado
+                    Edwin Carreño
                 </div>
                 <br />
                 <div id="nombres">
@@ -47,11 +47,11 @@ function pres(props) {
                 <br />
                 <div>
                 <a href="https://github.com/racortazarf/Parcial3Cod" target="_blank">
-                 <Button>Repositorio Front-end</Button>
+                 <Button id="botonrepo" >Repositorio Front-end</Button>
                 </a>
                 <br/>
                 <a href="https://github.com/camilo95951/Parcial3_Back" target="_blank">
-                 <Button>Repositorio Back-end</Button>
+                 <Button id="botonrepo">Repositorio Back-end</Button>
                 </a>
         </div>
                 <br />
