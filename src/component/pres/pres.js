@@ -26,7 +26,15 @@ function pres(props) {
                 </div>
                 <br />
                 <div id="nombres">
-                    Camilo Salgado
+                    Richard Cortazar
+                </div>
+                <br />
+                <div id="nombres">
+                    William Gonzalez     
+                </div>
+                <br />
+                <div id="nombres">
+                    Cristian LLanos
                 </div>
                 <br />
                 <div id="nombres">
@@ -34,24 +42,16 @@ function pres(props) {
                 </div>
                 <br />
                 <div id="nombres">
-                    William Gonzalez
-                </div>
-                <br />
-                <div id="nombres">
-                    Richard Cortazar
-                </div>
-                <br />
-                <div id="nombres">
-                    Cristian LLanos
+                    Camilo Salgado
                 </div>
                 <br />
                 <div>
                 <a href="https://github.com/racortazarf/Parcial3Cod" target="_blank">
-                 <Button>Repositorio Front-end</Button>
+                 <Button variant="outlined" color="primary">Repositorio Front-end</Button>
                 </a>
                 <br/>
                 <a href="https://github.com/camilo95951/Parcial3_Back" target="_blank">
-                 <Button>Repositorio Back-end</Button>
+                 <Button variant="outlined" color="secondary">Repositorio Back-end</Button>
                 </a>
         </div>
                 <br />
