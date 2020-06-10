@@ -46,24 +46,19 @@ function pres(props) {
                 </div>
                 <br />
                 <div>
-                <Link href ="https://github.com/camilo95951/Parcial3_Back">
-                   <Button variant="contained">Default</Button>
-                </Link>
-                </div>
-                <br />
-                <div>
-                <input
-                     type="button"
-                     onclick="location.href='https://github.com/camilo95951/Parcial3_Back'; "
-                     value="Repositorio back"
-                     name="boton"
-                     id="botonrepo"
-                 />
-                </div>
+                <a href="https://github.com/racortazarf/Parcial3Cod" target="_blank">
+                 <Button>Repositorio Front-end</Button>
+                </a>
+                <br/>
+                <a href="https://github.com/camilo95951/Parcial3_Back" target="_blank">
+                 <Button>Repositorio Back-end</Button>
+                </a>
+        </div>
                 <br />
             </p>
         </center></div>
     );
+    
 }
 
 export default pres;
