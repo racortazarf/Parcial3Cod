@@ -45,7 +45,7 @@ function Regis(props) {
     }
     
 
-     axios.post('http://parcial3app-env.eba-pbupt3qx.us-east-2.elasticbeanstalk.com/user', {
+     axios.post('https://k16jzj2jrl.execute-api.us-east-2.amazonaws.com/dev/lib/user', {
       name: textName,
       lastName: textLastName,
       age: textAge,
