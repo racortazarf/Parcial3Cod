@@ -14,7 +14,7 @@ function mod() {
 
     useEffect(()=> {
         if (!statusFlag){
-            axios.get('http://localhost:8080/user'
+            axios.get('https://k16jzj2jrl.execute-api.us-east-2.amazonaws.com/dev/lib/user'
             ).then((response)=> {
             console.log(response);
             setUserData(response);
