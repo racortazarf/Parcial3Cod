@@ -45,7 +45,7 @@ function Regis(props) {
     }
     
 
-     axios.post('http://localhost:8080/user', {
+     axios.post('http://parcial3app-env.eba-pbupt3qx.us-east-2.elasticbeanstalk.com/user', {
       name: textName,
       lastName: textLastName,
       age: textAge,
@@ -182,7 +182,7 @@ function Regis(props) {
           value="Acepto terminos y condiciones"
           inputProps={{ 'aria-label': 'primary checkbox' }}
         />
-        <label>Al Registrarse, Aceptas los Terminos y Condiciones</label>
+        <label>Al Registrarse, Acepta los Terminos y Condiciones</label>
 
         <br />
         <Button

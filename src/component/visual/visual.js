@@ -16,7 +16,7 @@ function visual() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=> {
         if (!statusFlag){
-            axios.get('http://localhost:8080/user'
+            axios.get('http://parcial3app-env.eba-pbupt3qx.us-east-2.elasticbeanstalk.com/user'
             ).then((response)=> {
             console.log(response);
             setUserData(response);
