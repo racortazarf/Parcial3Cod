@@ -109,7 +109,7 @@ function Regis(props) {
           height="150"
         />
       </Typography>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} component="div" style={{ backgroundColor: '#fcfdff', height: '90vh', maxWidth:'60vh' }}>
         <Typography>
           <h2 className="Subsec">Datos Personales</h2>
         </Typography>
